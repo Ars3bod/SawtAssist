@@ -1,0 +1,148 @@
+{
+  "timestamp": "20250406_130806",
+  "session_id": "f0ea6067",
+  "message_type": "user_input",
+  "audio": {
+    "path": "/app/storage/audio/user_messages/user_20250406_130806_f0ea6067.wav",
+    "format": "wav",
+    "duration_seconds": 0,
+    "file_size_bytes": 103297
+  },
+  "transcription": {
+    "language": "ar",
+    "model": "whisper-base",
+    "confidence_score": 0,
+    "segments": [
+      {
+        "id": 0,
+        "seek": 0,
+        "start": 0.0,
+        "end": 3.56,
+        "text": " phải يعاله من الان oyun يدخول ال overview",
+        "tokens": [
+          50364,
+          23394,
+          37495,
+          6027,
+          3224,
+          9154,
+          2423,
+          7649,
+          41773,
+          7251,
+          3215,
+          9778,
+          12610,
+          2423,
+          12492,
+          50542
+        ],
+        "temperature": 1.0,
+        "avg_logprob": -5.3720652262369795,
+        "compression_ratio": 1.1166666666666667,
+        "no_speech_prob": 0.00975729525089264
+      },
+      {
+        "id": 1,
+        "seek": 0,
+        "start": 11.94,
+        "end": 14.22,
+        "text": " ومرال الان نgetic",
+        "tokens": [
+          50961,
+          4032,
+          29973,
+          6027,
+          2423,
+          7649,
+          8717,
+          19177,
+          51075
+        ],
+        "temperature": 1.0,
+        "avg_logprob": -5.3720652262369795,
+        "compression_ratio": 1.1166666666666667,
+        "no_speech_prob": 0.00975729525089264
+      },
+      {
+        "id": 2,
+        "seek": 0,
+        "start": 14.700000000000001,
+        "end": 15.46,
+        "text": " تلاki",
+        "tokens": [
+          51099,
+          6055,
+          15040,
+          2984,
+          51137
+        ],
+        "temperature": 1.0,
+        "avg_logprob": -5.3720652262369795,
+        "compression_ratio": 1.1166666666666667,
+        "no_speech_prob": 0.00975729525089264
+      },
+      {
+        "id": 3,
+        "seek": 0,
+        "start": 23.12,
+        "end": 24.34,
+        "text": " دمس كيف fit",
+        "tokens": [
+          51520,
+          11778,
+          2304,
+          3794,
+          9122,
+          33911,
+          3318,
+          51581
+        ],
+        "temperature": 1.0,
+        "avg_logprob": -5.3720652262369795,
+        "compression_ratio": 1.1166666666666667,
+        "no_speech_prob": 0.00975729525089264
+      },
+      {
+        "id": 4,
+        "seek": 0,
+        "start": 24.5,
+        "end": 26.1,
+        "text": " بنان",
+        "tokens": [
+          51589,
+          44945,
+          7649,
+          51669
+        ],
+        "temperature": 1.0,
+        "avg_logprob": -5.3720652262369795,
+        "compression_ratio": 1.1166666666666667,
+        "no_speech_prob": 0.00975729525089264
+      },
+      {
+        "id": 5,
+        "seek": 0,
+        "start": 27.3,
+        "end": 28.18,
+        "text": " دари",
+        "tokens": [
+          51729,
+          11778,
+          16370,
+          51773
+        ],
+        "temperature": 1.0,
+        "avg_logprob": -5.3720652262369795,
+        "compression_ratio": 1.1166666666666667,
+        "no_speech_prob": 0.00975729525089264
+      }
+    ],
+    "word_count": 17
+  },
+  "client_info": {
+    "ip": null,
+    "timestamp_utc": "2025-04-06T13:08:36.025287",
+    "processing_time_ms": null
+  }
+}

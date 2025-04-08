@@ -1,0 +1,25 @@
+{
+  "timestamp": "20250406_130806",
+  "session_id": "f0ea6067",
+  "message_type": "assistant_response",
+  "response": {
+    "model": "gpt-3.5-turbo",
+    "word_count": 23,
+    "tokens_used": 196,
+    "completion_tokens": 97,
+    "prompt_tokens": 99
+  },
+  "audio": {
+    "service": "elevenlabs",
+    "voice_id": "RtVJcd0H7BekNhgXkBro",
+    "format": "mp3"
+  },
+  "performance": {
+    "total_processing_time_ms": 1604.351,
+    "timestamp_utc": "2025-04-06T13:08:37.629988"
+  },
+  "conversation": {
+    "in_response_to": " phải يعاله من الان oyun يدخول ال overview ومرال الان نgetic تلاki دمس كيف fit بنان دари",
+    "user_message_id": "user_20250406_130806_f0ea6067"
+  }
+}

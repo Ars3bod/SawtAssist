@@ -1,0 +1,4 @@
+# Sensitive files
+backend/.env
+backend/google_credentials.json
+backend/service-account-key.json 

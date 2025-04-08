@@ -1,0 +1,25 @@
+{
+  "timestamp": "20250406_130937",
+  "session_id": "dbc688bf",
+  "message_type": "assistant_response",
+  "response": {
+    "model": "gpt-3.5-turbo",
+    "word_count": 6,
+    "tokens_used": 98,
+    "completion_tokens": 26,
+    "prompt_tokens": 72
+  },
+  "audio": {
+    "service": "elevenlabs",
+    "voice_id": "RtVJcd0H7BekNhgXkBro",
+    "format": "mp3"
+  },
+  "performance": {
+    "total_processing_time_ms": 5415.848999999999,
+    "timestamp_utc": "2025-04-06T13:09:57.718734"
+  },
+  "conversation": {
+    "in_response_to": " كيف أو اصل من thisislupbeat.",
+    "user_message_id": "user_20250406_130937_dbc688bf"
+  }
+}

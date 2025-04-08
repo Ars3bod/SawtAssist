@@ -1,0 +1,25 @@
+{
+  "timestamp": "20250406_124700",
+  "session_id": "6761af00",
+  "message_type": "assistant_response",
+  "response": {
+    "model": "gpt-3.5-turbo",
+    "word_count": 16,
+    "tokens_used": 153,
+    "completion_tokens": 65,
+    "prompt_tokens": 88
+  },
+  "audio": {
+    "service": "elevenlabs",
+    "voice_id": "RtVJcd0H7BekNhgXkBro",
+    "format": "mp3"
+  },
+  "performance": {
+    "total_processing_time_ms": 1156.3609999999999,
+    "timestamp_utc": "2025-04-06T12:47:03.775653"
+  },
+  "conversation": {
+    "in_response_to": " طيب الحمد لا أبرا أسأل ومن قرأ نولات في لنده",
+    "user_message_id": "user_20250406_124700_6761af00"
+  }
+}

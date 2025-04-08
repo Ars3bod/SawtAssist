@@ -1,0 +1,25 @@
+{
+  "timestamp": "20250406_124743",
+  "session_id": "0b1c6139",
+  "message_type": "assistant_response",
+  "response": {
+    "model": "gpt-3.5-turbo",
+    "word_count": 35,
+    "tokens_used": 214,
+    "completion_tokens": 146,
+    "prompt_tokens": 68
+  },
+  "audio": {
+    "service": "elevenlabs",
+    "voice_id": "RtVJcd0H7BekNhgXkBro",
+    "format": "mp3"
+  },
+  "performance": {
+    "total_processing_time_ms": 4326.424,
+    "timestamp_utc": "2025-04-06T12:47:49.703457"
+  },
+  "conversation": {
+    "in_response_to": " وشمعنا الغافة",
+    "user_message_id": "user_20250406_124743_0b1c6139"
+  }
+}

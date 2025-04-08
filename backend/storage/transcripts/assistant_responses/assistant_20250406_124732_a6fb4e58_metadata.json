@@ -1,0 +1,25 @@
+{
+  "timestamp": "20250406_124724",
+  "session_id": "b4e38791",
+  "message_type": "assistant_response",
+  "response": {
+    "model": "gpt-3.5-turbo",
+    "word_count": 8,
+    "tokens_used": 107,
+    "completion_tokens": 38,
+    "prompt_tokens": 69
+  },
+  "audio": {
+    "service": "elevenlabs",
+    "voice_id": "RtVJcd0H7BekNhgXkBro",
+    "format": "mp3"
+  },
+  "performance": {
+    "total_processing_time_ms": 827.828,
+    "timestamp_utc": "2025-04-06T12:47:32.722993"
+  },
+  "conversation": {
+    "in_response_to": " ذلك كانت لديك ج",
+    "user_message_id": "user_20250406_124724_b4e38791"
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "timestamp": "20250406_130937",
+  "session_id": "dbc688bf",
+  "message_type": "user_input",
+  "audio": {
+    "path": "/app/storage/audio/user_messages/user_20250406_130937_dbc688bf.wav",
+    "format": "wav",
+    "duration_seconds": 0,
+    "file_size_bytes": 111900
+  },
+  "transcription": {
+    "language": "ar",
+    "model": "whisper-base",
+    "confidence_score": 0,
+    "segments": [
+      {
+        "id": 0,
+        "seek": 0,
+        "start": 0.0,
+        "end": 11.24,
+        "text": " كيف أو اصل من thisislupbeat.",
+        "tokens": [
+          50364,
+          9122,
+          33911,
+          34051,
+          1975,
+          36520,
+          9154,
+          341,
+          5788,
+          4870,
+          13,
+          50926
+        ],
+        "temperature": 1.0,
+        "avg_logprob": -4.317494025597205,
+        "compression_ratio": 0.8085106382978723,
+        "no_speech_prob": 0.15041807293891907
+      }
+    ],
+    "word_count": 5
+  },
+  "client_info": {
+    "ip": null,
+    "timestamp_utc": "2025-04-06T13:09:52.302280",
+    "processing_time_ms": null
+  }
+}
