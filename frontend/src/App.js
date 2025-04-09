@@ -70,6 +70,12 @@ export default function VoiceAssistant() {
         const formData = new FormData();
         formData.append("file", audioBlob, "audio.wav");
 
+        // Prepare conversation history (only user and assistant messages)
+        const historyToSend = messages.filter(
+          (msg) => msg.role === "user" || msg.role === "assistant"
+        );
+        formData.append("messages", JSON.stringify(historyToSend));
+
         // Add user message immediately with timestamp
         setMessages((prev) => [
           ...prev,

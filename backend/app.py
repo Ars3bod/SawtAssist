@@ -1,4 +1,4 @@
-from fastapi import FastAPI, UploadFile, File
+from fastapi import FastAPI, UploadFile, File, Form
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 from fastapi.staticfiles import StaticFiles
@@ -12,6 +12,7 @@ from google.cloud import speech_v1
 from pydub import AudioSegment
 import io
 from dotenv import load_dotenv
+from typing import List, Dict
 
 # Load environment variables
 load_dotenv()
@@ -101,7 +102,7 @@ async def health_check():
     return {"status": "healthy"}
 
 @app.post("/ask")
-async def ask(file: UploadFile = File(...)):
+async def ask(file: UploadFile = File(...), messages: str = Form(...)):
     timestamp = get_timestamp()
     session_id = str(uuid.uuid4())[:8]
     
@@ -109,6 +110,20 @@ async def ask(file: UploadFile = File(...)):
     temp_audio_path = os.path.join(AUDIO_DIR, "temp", f"input_{timestamp}_{session_id}.wav")
     
     try:
+        # Parse conversation history
+        try:
+            conversation_history: List[Dict[str, str]] = json.loads(messages)
+            # Basic validation: check if it's a list of dicts with 'role' and 'content'
+            if not isinstance(conversation_history, list) or not all(
+                isinstance(msg, dict) and 'role' in msg and 'content' in msg 
+                for msg in conversation_history
+            ):
+                raise ValueError("Invalid message format")
+        except (json.JSONDecodeError, ValueError) as e:
+            print(f"Error parsing messages: {e}")
+            # Handle error or default to empty history
+            conversation_history = []
+
         # Read and convert audio file
         audio_content = await file.read()
         wav_content = convert_audio_to_wav(audio_content)
@@ -155,19 +170,27 @@ async def ask(file: UploadFile = File(...)):
             user_metadata
         )
 
+        # Construct messages for OpenAI, including history
+        openai_messages = [
+            {
+                "role": "system",
+                "content": """You are an Arabic-speaking assistant, specifically using Saudi dialect.
+                Always respond in Arabic using Saudi dialect and expressions.
+                Keep responses natural, friendly, and culturally appropriate for Saudi Arabia.
+                Use common Saudi phrases and expressions when suitable.
+                Maintain context from the previous turns in the conversation."""
+            }
+        ]
+        # Add history, filtering out potential placeholders or errors if needed
+        openai_messages.extend([msg for msg in conversation_history if msg['role'] in ['user', 'assistant']])
+        
+        # Add the current user input
+        openai_messages.append({"role": "user", "content": user_input})
+
         # Generate assistant response
         response = client.chat.completions.create(
             model="gpt-3.5-turbo",
-            messages=[
-                {
-                    "role": "system",
-                    "content": """You are an Arabic-speaking assistant, specifically using Saudi dialect.
-                    Always respond in Arabic using Saudi dialect and expressions.
-                    Keep responses natural, friendly, and culturally appropriate for Saudi Arabia.
-                    Use common Saudi phrases and expressions when suitable."""
-                },
-                {"role": "user", "content": user_input}
-            ]
+            messages=openai_messages # Use the history-aware messages list
         )
         assistant_reply = response.choices[0].message.content
         
